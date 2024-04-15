@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function recipeDetail() {
   const [recipeData, setRecipeData] = useState({});
+ 
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -14,7 +15,7 @@ function recipeDetail() {
       .get(`${api}/recipes/${id}`)
       .then(({ data }) => {
         setRecipeData(data.payload);
-        //  console.log(data.payload)
+        console.log("Recipe data:", data.payload);
       })
       .catch((error) => console.warn(error));
   }, []);
@@ -23,16 +24,19 @@ function recipeDetail() {
     navigate(`/recipes/${id}/edit`);
   };
 
+  // after deleting it navigates back to the recipes page.
   const handleDeleteRecipe = () => {
-    axios.delete(`${api}/recipes/${id}`).then({ data });
+    axios.delete(`${api}/recipes/${id}`).then(() => {
+      navigate(`/recipes`);
+    });
   };
 
   return (
     <div>
       <div>
-        <img src={recipeData.image_url} />
         <h1>{recipeData.name}</h1>
         <h3>{recipeData.description}</h3>
+
         <div>
           <button onClick={handleEditRecipe}>Edit</button>
           <button onClick={handleDeleteRecipe}>Delete</button>

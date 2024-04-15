@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function editRecipe() {
   const [recipe, setRecipe] = useState({
     name: "",
-    image_url: "",
     description: "",
   });
+  console.log(recipe)
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const api = import.meta.env.VITE_API;
 
@@ -16,19 +17,29 @@ function editRecipe() {
     axios
       .get(`${api}/recipes/${id}`)
       .then(({ data }) => {
-        console.log(data);
         setRecipe(data.payload);
       })
-      .catch((error) => console.log(error));
-  }, []);
+      .catch((error) => console.warn(error));
+  }, [id]);
 
   function handleTextChange(event) {
     setRecipe({ ...recipe, [event.target.id]: event.target.value });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    axios
+      .put(`${api}/recipes/${id}`, recipe)
+      .then(({ data }) => {
+        navigate(`/recipes/${data.payload}`);
+      })
+      .catch((error) => console.log(error));
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label>Name:</label>
           <input
@@ -43,28 +54,17 @@ function editRecipe() {
         </div>
 
         <div>
-          <label>Image:</label>
-          <input
-            type="text"
-            id="image_url"
-            name="image_url"
-            value={recipe.image_url}
-            onChange={handleTextChange}
-          />
-        </div>
-
-        <div>
           <label>Description:</label>
           <input
-            textarea="text"
+            type="textarea"
             id="description"
             name="description"
             value={recipe.description}
             onChange={handleTextChange}
           />
         </div>
+        <button type="submit">Submit</button>
       </form>
-      <button>Submit</button>
     </div>
   );
 }
