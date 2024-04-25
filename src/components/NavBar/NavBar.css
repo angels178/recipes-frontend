@@ -1,0 +1,26 @@
+header {
+    background-color: #395144;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0px 90px;
+}
+
+.logo {
+    color: orange;
+    font-size: 30px;
+}
+

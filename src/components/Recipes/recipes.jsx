@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./recipes.css";
 
 function recipes() {
   const [recipesData, setRecipesData] = useState([]);
@@ -18,11 +19,14 @@ function recipes() {
   }, []);
 
   return (
-    <div>
+    <div className="recipes-container">
       {recipesData.map((recipe) => {
         return (
-          <div key={recipe.id}>
-            <Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link>
+          <div key={recipe.id} className="recipes-item">
+            <p>
+              <Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link>
+            </p>
+            
           </div>
         );
       })}

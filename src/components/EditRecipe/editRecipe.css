@@ -1,0 +1,35 @@
+form {
+    margin: 100px;
+    border: 1px solid #FF9800;
+    border-radius: 10px;
+    background-color: #FF9800;
+    padding: 60px 0px;
+}
+
+.form-container div {
+    margin: 20px auto;
+}
+
+.form-container div label {
+    margin-right: 10px;
+}
+
+.form-container div input {
+    max-width: 100%;
+}
+
+.form-container div textarea {
+    width: 608px;
+    height: 233px;
+    margin-top: 20px;
+}
+
+.form-container button {
+    background-color: #C3E2C2;
+    color: #000;
+}
+
+.form-container button:hover {
+    color: #FF5B22;
+}
+

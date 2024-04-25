@@ -1,0 +1,11 @@
+.recipes-container {
+    margin: 70px auto;
+}
+
+.recipes-container :link {
+    text-decoration: none;
+}
+
+.recipes-item {
+    margin-bottom: 10px;
+}
