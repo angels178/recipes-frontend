@@ -20,6 +20,7 @@
 
 .recipe_detail_container {
    padding: 3em;
+   color: #000;
 }
 
 .ingredients {
@@ -28,4 +29,5 @@
 
 .recipe_detail_container h3 {
    color: darkorange;
+   font-style: italic;
 }
