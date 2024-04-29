@@ -5,7 +5,7 @@ import EditRecipe from "./components/EditRecipe/editRecipe";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import RecipeForm from "./components/RecipeForm/RecipeForm";
-import Footer from "./components/Footer/footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
