@@ -9,7 +9,9 @@ function recipeDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const api = import.meta.env.VITE_API;
+  const api = "Production"
+    ? "https://recipes-backend-practice.onrender.com"
+    : import.meta.env.VITE_API;
 
   useEffect(() => {
     axios

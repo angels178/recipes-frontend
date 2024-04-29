@@ -6,7 +6,9 @@ import "./recipes.css";
 function recipes() {
   const [recipesData, setRecipesData] = useState([]);
 
-  const api = import.meta.env.VITE_API;
+  const api = "Production"
+    ? "https://recipes-backend-practice.onrender.com"
+    : import.meta.env.VITE_API;
 
   useEffect(() => {
     axios
@@ -26,7 +28,6 @@ function recipes() {
             <p>
               <Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link>
             </p>
-            
           </div>
         );
       })}
