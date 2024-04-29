@@ -1,5 +1,6 @@
 .recipes-container {
     margin: 70px auto;
+    text-align: center;
 }
 
 .recipes-container :link {

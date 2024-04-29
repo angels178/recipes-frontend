@@ -8,7 +8,8 @@ import RecipeForm from "./components/RecipeForm/RecipeForm";
 
 function App() {
   return (
-    <Router>
+    <div className="app">
+      <Router>
       <NavBar />
       <Routes>
         <Route path="/recipes" element={<Recipes />} />
@@ -17,6 +18,8 @@ function App() {
         <Route path="/recipes/new" element={<RecipeForm />} />
       </Routes>
     </Router>
+    </div>
+    
   );
 }
 

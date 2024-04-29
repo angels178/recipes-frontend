@@ -21,6 +21,7 @@
 .recipe_detail_container {
    padding: 3em;
    color: #000;
+   text-align: center;
 }
 
 .ingredients {
