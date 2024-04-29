@@ -1,7 +1,7 @@
 import * as FaIcons from "react-icons/fa";
 import "./Footer.css";
 
-function footer() {
+function Footer() {
   return (
     <div>
       <footer className="footer">
@@ -30,4 +30,4 @@ function footer() {
   );
 }
 
-export default footer;
+export default Footer;
