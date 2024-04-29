@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import api from "../Api/Api";
 import "./editRecipe.css";
 
 function editRecipe() {
@@ -15,10 +16,6 @@ function editRecipe() {
   console.log(recipe);
   const { id } = useParams();
   const navigate = useNavigate();
-
-  const api = "Production"
-    ? "https://recipes-backend-practice.onrender.com"
-    : import.meta.env.VITE_API;
 
   useEffect(() => {
     axios

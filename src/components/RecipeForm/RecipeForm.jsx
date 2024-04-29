@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import api from "../Api/Api";
 import "./RecipeForm.css";
 
 function RecipeForm() {
@@ -15,13 +16,7 @@ function RecipeForm() {
 
   const navigate = useNavigate();
 
-  const api = "Production"
-    ? "https://recipes-backend-practice.onrender.com"
-    : import.meta.env.VITE_API;
-
   const handleInput = (event) => {
-    // assign the variable
-    //
     const { name, value } = event.target;
 
     setRecipe({ ...recipe, [name]: value });
