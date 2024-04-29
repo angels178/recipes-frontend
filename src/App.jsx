@@ -5,6 +5,7 @@ import EditRecipe from "./components/EditRecipe/editRecipe";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import RecipeForm from "./components/RecipeForm/RecipeForm";
+import Footer from "./components/Footer/footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/recipes/:id/edit" element={<EditRecipe />} />
         <Route path="/recipes/new" element={<RecipeForm />} />
       </Routes>
+      <Footer />
     </Router>
     </div>
     

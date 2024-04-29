@@ -1,0 +1,21 @@
+.footer {
+ background-color: #829460;
+ text-align: center;
+ height: 90px;
+ margin: 0px auto;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+
+.footer-icon-group {
+    margin: 10px;
+}
+  
+
+  
