@@ -25,7 +25,7 @@ function Footer() {
             <FaIcons.FaGithub className="soical-icon" />
           </div>
           <div className="soical-icon-group">
-          <FaIcons.FaTumblr className="soical-icon" />
+          <FaIcons.FaTumblrSquare className="soical-icon" />
           </div>
         </div>
       </footer>
