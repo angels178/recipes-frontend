@@ -6,22 +6,23 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import RecipeForm from "./components/RecipeForm/RecipeForm";
 import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className="app">
       <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/recipes/:id" element={<RecipeDetail />} />
-        <Route path="/recipes/:id/edit" element={<EditRecipe />} />
-        <Route path="/recipes/new" element={<RecipeForm />} />
-      </Routes>
-      <Footer />
-    </Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/recipes/:id" element={<RecipeDetail />} />
+          <Route path="/recipes/:id/edit" element={<EditRecipe />} />
+          <Route path="/recipes/new" element={<RecipeForm />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
-    
   );
 }
 

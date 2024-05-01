@@ -8,21 +8,24 @@ function Footer() {
         <div className="footer-container">
           &copy; 2024 Love Cusine Recipe - All right reserved
         </div>
-        <div className="footer-social">
-          <div className="footer-icon-group">
-            <FaIcons.FaFacebook className="footer-icon" />
+        <div className="social">
+          <div className="soical-icon-group">
+            <FaIcons.FaFacebook className="soical-icon" />
           </div>
-          <div className="footer-icon-group">
-            <FaIcons.FaTwitter className="footer-icon" />
+          <div className="soical-icon-group">
+            <FaIcons.FaTwitter className="social-icon" />
           </div>
-          <div className="footer-icon-group">
-            <FaIcons.FaInstagram className="footer-icon" />
+          <div className="soical-icon-group">
+            <FaIcons.FaInstagram className="soical-icon" />
           </div>
-          <div className="footer-icon-group">
-            <FaIcons.FaLinkedin className="footer-icon" />
+          <div className="soical-icon-group">
+            <FaIcons.FaLinkedin className="soical-icon" />
           </div>
-          <div className="footer-icon-group">
-            <FaIcons.FaGithub className="footer-icon" />
+          <div className="soical-icon-group">
+            <FaIcons.FaGithub className="soical-icon" />
+          </div>
+          <div className="soical-icon-group">
+          <FaIcons.FaTumblr className="soical-icon" />
           </div>
         </div>
       </footer>
