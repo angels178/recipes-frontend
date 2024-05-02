@@ -8,9 +8,7 @@ function NavBar() {
       <div>
         <nav>
           <ul>
-            <li className="logo">
-              <Link to="/">Love Cusine Recipe</Link>
-            </li>
+            <li className="logo">Love Cusine Recipe</li>
 
             <li>
               <Link to="/recipes">Recipes</Link>
