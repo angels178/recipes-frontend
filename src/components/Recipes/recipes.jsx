@@ -17,7 +17,7 @@ function recipes() {
         setRecipesData(data.payload);
         // console.log(res.data.payload)
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.warn(error));
   }, []);
 
   return (

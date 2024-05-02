@@ -35,10 +35,10 @@ function editRecipe() {
 
     axios
       .put(`${api}/recipes/${id}`, recipe)
-      .then(({ data }) => {
-        navigate(`/recipes/${data.payload}`);
+      .then(() => {
+        navigate(`/recipes/${id}`);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.warn(error));
   }
 
   return (
@@ -64,6 +64,7 @@ function editRecipe() {
             name="description"
             value={recipe.description}
             onChange={handleTextChange}
+            required
           />
         </div>
 
@@ -75,6 +76,7 @@ function editRecipe() {
             name="ingredients"
             value={recipe.ingredients}
             onChange={handleTextChange}
+            required
           />
         </div>
 

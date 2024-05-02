@@ -57,6 +57,7 @@ function RecipeForm() {
             name="description"
             value={recipe.description}
             onChange={handleInput}
+            required
           />
         </div>
 
@@ -67,6 +68,7 @@ function RecipeForm() {
             name="ingredients"
             value={recipe.ingredients}
             onChange={handleInput}
+            required
           />
         </div>
 
